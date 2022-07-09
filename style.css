@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+    color: white;
+}
+
+/* header section */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #7d7aff;
+    height: 50px;
+}
+
+/* nav section */
+nav {
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    height: 100%;
+}
+
+nav ul li {
+    padding: 0 20px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li:hover {
+    background-color: #ffffff80;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.burger-btn {
+    width: 40px;
+    height: 35px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    
+}
+
+.burger-line {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+    transition: .5s;
+}
+
+.burger-line-first, .burger-line-th {
+    margin-left: -5px;
+}
+
+.burger-line-second {
+    margin-right: -5px;
+}
+
+.burger-line-first-rotage {
+    transform: rotate(45deg);
+    margin-bottom: -5px;
+    margin-right: -5px;
+    transition: .5s;
+}
+
+.burger-line-second-translate {
+    transform: translateX(140%);
+    transition: .5s;
+}
+
+.burger-line-th-rotage {
+    transform: rotate(-45deg);
+    margin-right: -5px;
+    margin-top: -5px;
+    transition: .5s;
+}
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-end;
+    overflow-x: hidden;
+}
+
+.nav-responsive {
+    background-color: #7D7AFF;
+    height: 100vh;
+    width: 250px;
+    right: 0;
+    display: none;
+    transform: translateX(100%);
+    transition: .5s;
+}
+
+.nav-responsive-show {
+    transform: translateX(0);
+    transition: .5s;
+}
+
+.nav-responsive ul {
+    display: flex;
+    flex-direction: column;    
+}
+
+.nav-responsive ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.nav-responsive ul li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-responsive ul li a {
+    text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+
+    nav {
+        display: none;
+    }
+
+    .burger-btn {
+        display: flex;
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+}
